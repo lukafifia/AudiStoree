@@ -1,0 +1,73 @@
+<div class="home-container">
+    <div class="content">
+      <h1>2023 Audi RS e-tron® GT</h1>
+      <p class="audiP">Starting at $144,900</p>
+      <div class="buttons">
+        <button class="build-button">Build & price</button>
+        <button class="news-button">Get Audi news & updates</button>
+      </div>
+    </div>
+  
+  </div>
+  
+
+  <section class="info">
+    <div class="infospeed">
+        <p class="infoP">Power</p>
+        <h2>637 HP</h2>
+        <p class="infoPTwo">With Boost Engaged</p>
+
+    </div>
+    <div class="infospeed">
+        <p class="infoP">Battery size</p>
+        <h2>93 kWh</h2>
+        <p class="infoPTwo">Gross</p>
+    </div>
+    <div class="infospeed">
+        <p class="infoP">0-60 mph in</p>
+        <h2>3.1 sec</h2>
+        <p class="infoPTwo">With Boost Engaged</p>
+    </div>
+  </section>
+
+  <div class="slider">
+    <div class="slider-container" [style.transform]="'translateX(-' + currentSlide * 100 + '%)'">
+      <div class="slide" *ngFor="let slide of slides">
+        <img [src]="slide.image" [alt]="slide.alt" />
+        <div class="slide-content">
+          <h2>{{ slide.title }}</h2>
+          <p>{{ slide.description }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Navigation Arrows -->
+    <button class="arrow left" (click)="prevSlide()">&lt;</button>
+    <button class="arrow right" (click)="nextSlide()">&gt;</button>
+  
+    <!-- Indicators -->
+    <div class="indicators">
+      <span
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === currentSlide"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+  </div>
+<section class="carrs">
+  <div class="car-ad">
+    <h5>Shop the 2023 Audi RS e-tron GT</h5>
+    <img
+      src="https://aws.audimiddleeast.com/audi/feature-apps/e-tron/stock/assets/img/stock/gtrs/Y1Y1-44I.png"
+      alt="Audi RS e-tron GT"
+      class="car-image"
+    />
+    <div class="buttonsa">
+      <button class="btn">Build & Price</button>
+      <button class="btn">Contact Dealer</button>
+    </div>
+  </div>
+</section>
+
+
+
